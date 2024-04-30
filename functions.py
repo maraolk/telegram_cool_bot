@@ -199,7 +199,7 @@ def menu(message):
 
 # Заполнение массива с названием городов
 def set_cities():
-   with open("3 day/city.csv", encoding='utf-8') as r_file:
+   with open("3 Day/city.csv", encoding='utf-8') as r_file:
        file_reader = csv.reader(r_file, delimiter=";") # Читаем файл
        for row in file_reader:
            cities_list.append(row[3])# Добавляем в массив названия городов
