@@ -228,7 +228,7 @@ def help_cities(message):
 def play_cities(message):
    global city_last, cities_list
    message.text = message.text.strip()
-   if message.text in cities_list: # Если названный город есть в массиве возможных городов
+   if message.text.lower() in cities_list: # Если названный город есть в массиве возможных городов
        markup = telebot.types.InlineKeyboardMarkup(row_width=2)
        game_end = telebot.types.InlineKeyboardButton(text='Закончить', callback_data='cities_no')
        last_char = telebot.types.InlineKeyboardButton(text='На какую букву', callback_data='last_char')
